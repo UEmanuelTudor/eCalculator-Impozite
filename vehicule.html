@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="http://ecalculatorimpozite.uetcompany.ro/rex3.jpeg">
+
+    <title>eCalculator Impozite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vehicule.css">
+</head>
+
+<body style="background-image: url('http://ecalculatorimpozite.uetcompany.ro/fin11.jpeg'); background-repeat: no-repeat;
+background-attachment: fixed;  
+background-size: cover;">
+    <style>
+        .left {
+
+            position: fixed;
+            margin-top: 5%;
+            margin-left: 8em;
+            width: 25%;
+        }
+
+        #cc {
+
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        #Rezultat {
+
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .pcm {
+            position: relative;
+            margin-left: 150px;
+            margin-top: -40px;
+        }
+
+        .btn-group button {
+            background-color: #92acc3;
+            border: 1px solid #92acc3;
+            position: relative;
+            color: black;
+            padding: 10px 24px;
+            cursor: pointer;
+            width: 50%;
+            display: block;
+            text-transform: none;
+            border-radius: 4px;
+            margin: 0.5em;
+            margin-left: 45%;
+        }
+
+        .btn-group button:focus {
+    background-color: #323651;
+     color:white;
+}
+
+        .compute {
+            background-color: #fde092;
+            border-bottom-color: #111;
+            border: none;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-left: 10em;
+            margin-top: -3em;
+            cursor: pointer;
+            width: 45%;
+        }
+
+        .compute:hover {
+            background-color: #fcda6c;
+            border-bottom-color: #111;
+        }
+    </style>
+
+    <div class="topnav" id="myTopnav">
+
+        <a href="index.html" onclick="openPage('Home', this,) ">Home <br>====</a>
+        <a href="about.html" onclick="openPage('About', this,)">About<br> us </a>
+        <a href="pensii.html" onclick="openPage('About', this,)">Impozit <br>Pensii</a>
+        <a href="vehicule.html">Impozit <br>Vehicule</a>
+        <a href="salarii.html" onclick="openPage('Projects', this,) ">Impozit <br>Salarii</a>
+        <a href="legislatie.html" onclick="openPage('Contact', this,) ">Legislație<br>=======</a>
+
+        <img src="http://ecalculatorimpozite.uetcompany.ro/logo_meniu.png" class="logo">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <div class="left">
+        <h1 style="background-color:#92acc3;">Calculator impozit  vehicule</h1>
+     <br>
+        <form>
+            <div id="dvtext">
+                <p style="font-size: 1.8em;"><b>Capacitatea cilindrică:</b></p>
+                <input type="number" id="cc" min="0" value="" hidden /> <p class="pcm"><b>cm<sup>3</sup></b></p>
+            </div>
+            <br>
+            <br>
+            <h1>Impozit anual: <span id="Rezultat"></span> lei</h1>
+            <h3>În 2 rate egale:<br> până la data de 31 martie - <span id="Rezultatt"></span> lei <br> până la data de 30 septembrie - <span id="Rezultattt"></span> lei </h3>
+            <br>
+            <input id="reset" type="reset" value="Resetare">
+
+        </form>
+
+        <button class="compute" onclick="calculate_vehicule()"><b>CALCULEAZĂ!</b> </button>
+    </div>
+    <div class="right" style="margin-top:10vh;margin-left:20%;width:50vw ;">
+
+        <h1 style=" margin-top:70px;margin-left:40%;width:30vw;text-align:center;"><b>Alege tipul vehiculului</b></h1>
+        <div class="btn-group">
+            <button id="1" name="answer" class="btn-group" value="1"
+                onclick="transform(this);showInputBox()">Motociclete, tricicluri, cvadricicluri </button>
+            <button id="2" name="answer" class="btn-group" value="2"
+                onclick="transform(this);showInputBox()">Autoturisme </button>
+            <button id="3" name="answer" class="btn-group" value="3" onclick="transform(this);showInputBox()">Autobuze,
+                autocare, microbuze </button>
+            <button id="4" name="answer" class="btn-group" value="4" onclick="transform(this);showInputBox()">Alte
+                vehicule cu tracțiune mecanică cu masa totală maximă autorizată de până la 12 tone, inclusiv </button>
+            <button id="5" name="answer" class="btn-group" value="5" onclick="transform(this);showInputBox()">Tractoare
+                înmatriculate </button>
+        </div>
+
+
+     <p style="">
+       <b> *Introduceți mai întâi capacitatea cilindrică, iar apoi selectați tipul vehiculului!</b><br>
+        *Dacă valoarea impozitului anual este mai mică sau egală cu 50 de lei, se achita integral până la dată de 31 Martie!<br>
+    </p> 
+    </div>
+
+    <script src=" vehicule.js">
+    </script>
+</body>
+
+</html>

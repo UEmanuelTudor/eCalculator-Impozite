@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="http://ecalculatorimpozite.uetcompany.ro/rex3.jpeg">
+
+  <title>eCalculator Impozite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="pensii.css">
+</head>
+
+<body style="background-image: url('http://ecalculatorimpozite.uetcompany.ro/fin4.jpeg'); background-repeat: no-repeat;
+background-attachment: fixed;  
+background-size: cover;">
+    <div class="topnav" id="myTopnav">
+
+        <a href="index.html" onclick="openPage('Home', this,) ">Home <br>====</a>
+        <a href="about.html" onclick="openPage('About', this,)">About<br> us </a>
+        <a href="pensii.html" onclick="openPage('About', this,)">Impozit <br>Pensii</a>
+        <a href="vehicule.html">Impozit <br>Vehicule</a>
+        <a href="salarii.html" onclick="openPage('Projects', this,) ">Impozit <br>Salarii</a>
+        <a href="legislatie.html" onclick="openPage('Contact', this,) ">Legislație<br>=======</a>
+        <img src="http://ecalculatorimpozite.uetcompany.ro/logo_meniu.png" class="logo">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div id="container">
+
+        <h1 style="background-color:#92acc3;">Calculator impozit pensii </h1>
+
+
+
+        <div id="calculator">
+
+            <form> <label for="venitp" class="lable">
+                Venitul din pensie este:<br>
+                <input type="number" min="0"
+                 id="venitp"
+                 placeholder="___">
+                 <symbol alt="narrow" draft="contributed">RON</symbol> <!--changed from "L"-->
+                 </label>
+
+                <label for="cota" class="lable">
+                Cota de impozit în România  e de 10% ! <br>
+                </label>
+
+                <button type="button" id="calculate"><b>CALCULEAZĂ!</b>
+              </button>
+              
+                <input type="reset">
+            </form>
+
+        </div>
+        <div id="totalinterest"><span id="suma">0.00</span>
+
+            <sup><symbol alt="narrow" draft="contributed">RON</symbol> <!--changed from "L"--></sup>
+        </div>
+        <div id="totalinterest2"><span id="sumaa">0.00</span>
+            <sup><symbol alt="narrow" draft="contributed">RON</symbol> <!--changed from "L"--></sup>
+
+        </div>
+        <div id="totalinterest3"><span id="sumaaa">0.00</span>
+            <sup><symbol alt="narrow" draft="contributed">RON</symbol> <!--changed from "L"--></sup>
+        </div>
+       
+
+    </div>
+    <script src="pensii.js">
+    </script>
+</body>
+
+</html>

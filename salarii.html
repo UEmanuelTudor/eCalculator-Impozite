@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="http://ecalculatorimpozite.uetcompany.ro/rex3.jpeg">
+
+  <title>eCalculator Impozite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="salarii.css">
+</head>
+
+<body style="background-image: url('http://ecalculatorimpozite.uetcompany.ro/fin3.jpeg'); background-repeat: no-repeat;
+background-attachment: fixed;  
+background-size: cover;"
+>
+
+    <div class="topnav" id="myTopnav">
+
+        <a href="index.html" onclick="openPage('Home', this,) ">Home <br>====</a>
+        <a href="about.html" onclick="openPage('About', this,)">About<br> us </a>
+        <a href="pensii.html" onclick="openPage('About', this,)">Impozit <br>Pensii</a>
+        <a href="vehicule.html">Impozit <br>Vehicule</a>
+        <a href="salarii.html" onclick="openPage('Projects', this,) ">Impozit <br>Salarii</a>
+        <a href="legislatie.html" onclick="openPage('Contact', this,) ">Legislație<br>=======</a>
+
+        <img src="http://ecalculatorimpozite.uetcompany.ro/logo_meniu.png" class="logo">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+ 
+    <h1 style="background-color:#92acc3; margin-top:70px;margin-left:10%;width:30vw;text-align:center;">Calculator impozit salarii</h1>
+    <div class="left">
+       
+    <form>
+        <div id="sbrut_div">
+            <b>Salariul brut:</b>
+            <input type="number" min="0" value="0" id="sbrut" />
+        </div>
+        <p></p>
+        <div class="checkbox_div">
+            Funcția de bază:
+            <input type="radio" name="checkboxGroup" onclick="checkbox(this)" id="1" value="1"> <span id="msg1">Da</span>
+            <input type="radio" name="checkboxGroup" onclick="checkbox(this)" id="2" value="2"> <span id="msg2">Nu</span>
+        </div>
+        <br>
+        <div id="nrpers_div">
+            Specificați numărul de persoane pe care le aveți în întreținere:
+            <br>
+            <input type="number" min="0" value="0" id="nrpers" />
+        </div>
+        <br>
+        <div id="sindicat_div">
+            Cotizația la sindicat:
+            <input type="number" min="0" value="0" id="sindicat" />
+        </div>
+        <br>
+
+        <div id="pensie_facultativa_div">
+            Cotizația la pensia facultativă:
+            <input type="number" min="0" value="0" id="pensie_facultativa" />
+        </div>
+        <br>
+        <div class="scutit_div">
+            Scutit de impozit:
+            <input type="radio" name="scutitGroup" onclick="scutit(this)" id="1" value="1"> <span id="msg1">Da</span>
+            <input type="radio" name="scutitGroup" onclick="scutit(this)" id="2" value="2"> <span id="msg2">Nu</span>
+        </div>
+        <br>
+        <input id="reset" type="reset" value="Resetare">
+    </form>
+    <button class="compute" onclick="calculate_vehicule()"><b>CALCULEAZĂ!</b> </button>
+
+    </div>
+
+    <div class="right">
+        <p>Salariul brut</p>
+        <p>Asigurări Sociale(CAS)</p>
+        <p>Asigurări Sociale de Sănătate(CASS)</p>
+        <p>Deducere personală(DP)</p>
+        <p>Impozit(I)</p>
+      
+        <p style="  border-style: solid; border-color:black;"><b>Salariu NET</b></p>
+       
+
+    </div>
+    <div class="right-right">
+        <p id="Rezultat_sbrut"></p>
+        <p id="Rezultat_cas"></p>
+        <p id="Rezultat_cass"></p>
+        <p id="Rezultat_dp"></p>
+        <p id="Rezultat_i"></p>
+  
+       <b> <p id="Rezultat_sn"></p></b>
+      
+    </div>
+    <p style="margin-left:5vw;">
+        <b> *Introduceți mai întâi salariul brut și celelalte date personale, selectați butonul "Calculează", iar rezultatele se afișează în partea dreaptă
+            !</b><br>
+       
+     </p> 
+    <script src="salarii.js">
+    </script>
+</body>
+
+</html>
