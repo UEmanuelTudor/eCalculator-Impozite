@@ -3,7 +3,7 @@
 <head>
     <link rel="icon" type="image/x-icon" href="http://ecalculatorimpozite.uetcompany.ro/rex3.jpeg">
 
-  <title>eCalculator Impozite</title>
+    <title>eCalculator Impozite</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,8 +14,7 @@
 
 <body style="background-image: url('http://ecalculatorimpozite.uetcompany.ro/fin3.jpeg'); background-repeat: no-repeat;
 background-attachment: fixed;  
-background-size: cover;"
->
+background-size: cover;">
 
     <div class="topnav" id="myTopnav">
 
@@ -32,78 +31,130 @@ background-size: cover;"
         </a>
     </div>
 
- 
-    <h1 style="background-color:#92acc3; margin-top:70px;margin-left:10%;width:30vw;text-align:center;">Calculator impozit salarii</h1>
-    <div class="left">
-       
-    <form>
-        <div id="sbrut_div">
-            <b>Salariul brut:</b>
-            <input type="number" min="0" value="0" id="sbrut" />
-        </div>
-        <p></p>
-        <div class="checkbox_div">
-            Funcția de bază:
-            <input type="radio" name="checkboxGroup" onclick="checkbox(this)" id="1" value="1"> <span id="msg1">Da</span>
-            <input type="radio" name="checkboxGroup" onclick="checkbox(this)" id="2" value="2"> <span id="msg2">Nu</span>
-        </div>
-        <br>
-        <div id="nrpers_div">
-            Specificați numărul de persoane pe care le aveți în întreținere:
-            <br>
-            <input type="number" min="0" value="0" id="nrpers" />
-        </div>
-        <br>
-        <div id="sindicat_div">
-            Cotizația la sindicat:
-            <input type="number" min="0" value="0" id="sindicat" />
-        </div>
-        <br>
-
-        <div id="pensie_facultativa_div">
-            Cotizația la pensia facultativă:
-            <input type="number" min="0" value="0" id="pensie_facultativa" />
-        </div>
-        <br>
-        <div class="scutit_div">
-            Scutit de impozit:
-            <input type="radio" name="scutitGroup" onclick="scutit(this)" id="1" value="1"> <span id="msg1">Da</span>
-            <input type="radio" name="scutitGroup" onclick="scutit(this)" id="2" value="2"> <span id="msg2">Nu</span>
-        </div>
-        <br>
-        <input id="reset" type="reset" value="Resetare">
-    </form>
-    <button class="compute" onclick="calculate_vehicule()"><b>CALCULEAZĂ!</b> </button>
+    <p style="margin-left:30px;"><b>Alege tipul ! </b></p>
+    <div>
+        <label style="margin-left:30px;"><input type="checkbox" name="colorCheckbox" value="red"><b>REZIDENT</b></label>
+        <label style="margin-left:30px;"><input type="checkbox" name="colorCheckbox" value="green"><b>NEREZIDENT</b></label>
 
     </div>
 
-    <div class="right">
-        <p>Salariul brut</p>
-        <p>Asigurări Sociale(CAS)</p>
-        <p>Asigurări Sociale de Sănătate(CASS)</p>
-        <p>Deducere personală(DP)</p>
-        <p>Impozit(I)</p>
-      
-        <p style="  border-style: solid; border-color:black;"><b>Salariu NET</b></p>
-       
+    <div class="red box">
+        <h1 style="background-color:#92acc3; margin-top:30px;margin-left:10%;width:50vw;text-align:center;color: #000;">
+            Calculator
+            impozit salarii pentru REZIDENȚI</h1>
+        <br>
+        <p style="margin-left:5vw;color:black;">
+            <b> *Introduceți mai întâi salariul brut și celelalte date personale, selectați butonul "Calculează", iar
+                rezultatele se afișează în partea dreaptă !</b>
+        </p>
+        <div class="left">
+
+            <form>
+                <div id="sbrut_div">
+                    <b>Salariul brut:</b>
+                    <input type="number" min="0" value="0" id="sbrut" />
+                </div>
+                <p></p>
+                <div class="checkbox_div">
+                    Funcția de bază:
+                    <input type="radio" name="checkboxGroup" onclick="checkbox(this)" id="1" value="1"> <span
+                        id="msg1">Da</span>
+                    <input type="radio" name="checkboxGroup" onclick="checkbox(this)" id="2" value="2"> <span
+                        id="msg2">Nu</span>
+                </div>
+                <br>
+                <div id="nrpers_div">
+                    Specificați numărul de persoane pe care le aveți în întreținere:
+                    <br>
+                    <input type="number" min="0" value="0" id="nrpers" />
+                </div>
+                <br>
+                <div id="sindicat_div">
+                    Cotizația la sindicat:
+                    <input type="number" min="0" value="0" id="sindicat" />
+                </div>
+                <br>
+
+                <div id="pensie_facultativa_div">
+                    Cotizația la pensia facultativă:
+                    <input type="number" min="0" value="0" id="pensie_facultativa" />
+                </div>
+                <br>
+                <div class="scutit_div">
+                    Scutit de impozit:
+                    <input type="radio" name="scutitGroup" onclick="scutit(this)" id="1" value="1"> <span
+                        id="msg1">Da</span>
+                    <input type="radio" name="scutitGroup" onclick="scutit(this)" id="2" value="2"> <span
+                        id="msg2">Nu</span>
+                </div>
+                <br>
+                <input id="reset" type="reset" value="Resetare">
+            </form>
+            <button class="compute" onclick="calculate_vehicule()"><b>CALCULEAZĂ!</b> </button>
+
+        </div>
+
+        <div class="right">
+            <p>Salariul brut</p>
+            <p>Asigurări Sociale(CAS)</p>
+            <p>Asigurări Sociale de Sănătate(CASS)</p>
+            <p>Deducere personală(DP)</p>
+            <p>Impozit(I)</p>
+
+            <p style="  border-style: solid; border-color:black;"><b>Salariu NET</b></p>
+
+
+        </div>
+        <div class="right-right">
+            <p id="Rezultat_sbrut"></p>
+            <p id="Rezultat_cas"></p>
+            <p id="Rezultat_cass"></p>
+            <p id="Rezultat_dp"></p>
+            <p id="Rezultat_i"></p>
+
+            <b>
+                <p id="Rezultat_sn"></p>
+            </b>
+
+        </div>
 
     </div>
-    <div class="right-right">
-        <p id="Rezultat_sbrut"></p>
-        <p id="Rezultat_cas"></p>
-        <p id="Rezultat_cass"></p>
-        <p id="Rezultat_dp"></p>
-        <p id="Rezultat_i"></p>
-  
-       <b> <p id="Rezultat_sn"></p></b>
-      
+
+    <div class="green box">
+    <h1 style="background-color:#92acc3; margin-top:30px;margin-left:10%;width:50vw;text-align:center;color: #000;">
+        Calculator
+        impozit salarii pentru NEREZIDENȚI</h1>
+        <br>
+        <p style="color:#000">Perioada de ședere în România</p>
+    <input type="radio" name="scutitGroup" onclick="scutit(this)" id="1" value="1"> <span
+        id="msg1">Mai puțin de 183 de zile</span>
+    <input type="radio" name="scutitGroup" onclick="scutit(this)" id="2" value="2"> <span
+        id="msg2">Peste 183 de zile</span>
     </div>
-    <p style="margin-left:5vw;">
-        <b> *Introduceți mai întâi salariul brut și celelalte date personale, selectați butonul "Calculează", iar rezultatele se afișează în partea dreaptă
-            !</b><br>
-       
-     </p> 
+    <style>
+        .box {
+            color:black;
+            padding: 20px;
+            display: none;
+            margin-top: 20px;
+        }
+
+        
+
+        label {
+            margin-right: 15px;
+        }
+    </style>
     <script src="salarii.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[type="checkbox"]').click(function () {
+                var inputValue = $(this).attr("value");
+                $("." + inputValue).toggle();
+            });
+        });
     </script>
 </body>
 

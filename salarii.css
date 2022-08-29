@@ -27,24 +27,25 @@
     margin-left: 10%;
     width: 25%;
     font-size:25px;
+    color: #000;
 }
 
 .right {
     
-    position: fixed;
     margin-top: -25%;
     margin-left: 40%;
     width: 20%;
     font-size:25px;
+    color: #000;
 }
 
 .right-right {
    
-    position: fixed;
-    margin-top: -25%;
+    margin-top: -19%;
     margin-left: 55%;
     width: 5%;
     font-size:25px;
+    color: #000;
 }
 
 .compute {
@@ -364,4 +365,9 @@ li.dropdown {
 #Rezultat_dp{
   margin-top:55px;
 }
- 
+.box{
+    color: #fff;
+    padding: 20px;
+    display: none;
+    margin-top: 20px;
+}

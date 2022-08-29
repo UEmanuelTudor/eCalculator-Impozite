@@ -37,6 +37,7 @@ body {
     .topnav a:not(:first-child) {
         display: none;
     }
+
     .topnav a.icon {
         float: right;
         display: block;
@@ -47,11 +48,13 @@ body {
     .topnav.responsive {
         position: relative;
     }
+
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
+
     .topnav.responsive a {
         float: none;
         display: block;
@@ -141,7 +144,7 @@ form input[type="reset"]:active {
     position: relative;
     top: 1px;
 }
-
+/* 
 button {
     margin-top: 10%;
     background: #fde092;
@@ -162,7 +165,7 @@ button:hover {
 button:active {
     position: relative;
     top: 1px;
-}
+} */
 
 #totalinterest {
     font-size: 50px;
@@ -522,3 +525,11 @@ body {
 .form1{
 }
 */
+
+/* Initially, hide the extra text that
+            can be revealed with the button */
+#moreText {
+
+    /* Display nothing for the element */
+    display: none;
+}
